@@ -1,5 +1,7 @@
 # Too Delicious to Waste
 
+![Too Delicious to Waste](https://github.com/Capa03/Too-Delicious-to-waste/assets/79425111/04fdf39e-b268-47d7-b2c8-55a4dbd371c3)
+
 ## About
 "Too Delicious to Waste" is an innovative application dedicated to combating food waste. Our mission is to connect surplus food from restaurants, cafes, and individuals with those who can use it. By leveraging technology, we aim to create a community-driven platform that reduces food waste while fostering a sense of social responsibility.
 
