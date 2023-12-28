@@ -17,7 +17,7 @@ const SignUpScreen = ({ navigation }: SignUpScreenProps) => {
   const insets = useSafeAreaInsets();
   return (
     <SafeAreaProvider style={{ flex: 1, paddingTop: insets.top }}>
-      <StatusBar style="light" />
+      <StatusBar style="auto" />
       <View
         style={{
           flexDirection: "row",
@@ -51,7 +51,6 @@ const SignUpScreen = ({ navigation }: SignUpScreenProps) => {
           inputContainerStyle={{ borderBottomWidth: 0 }}
           style={styles.inputBox}
           placeholder="Email"
-          autoFocus
         ></Input>
       </View>
       <View style={styles.formContainer}>
@@ -60,7 +59,6 @@ const SignUpScreen = ({ navigation }: SignUpScreenProps) => {
           inputContainerStyle={{ borderBottomWidth: 0 }}
           style={styles.inputBox}
           placeholder="Password"
-          autoFocus
         ></Input>
       </View>
       <View>
@@ -90,7 +88,7 @@ const SignUpScreen = ({ navigation }: SignUpScreenProps) => {
         </View>
       </View>
       <View>
-        <Image style={{marginTop:'-20%', width: '100%'}} resizeMode="contain" source={require("../../assets/signup/wave.png")}></Image>
+        <Image style={{marginTop:10, width: '100%'}} resizeMode="contain" source={require("../../assets/signup/wave.png")}></Image>
       </View>
     </SafeAreaProvider>
   );

@@ -3,7 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useFonts } from "expo-font";
 import { NavigationProp, ParamListBase } from '@react-navigation/native';
-
+import { StatusBar } from "expo-status-bar";
 interface WelcomeScreenProps {
   navigation: NavigationProp<ParamListBase>
 }
@@ -19,6 +19,7 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar style="auto" />
       <View style={{ flex: 1 }}>
         <Text style={styles.header}>Lets save food</Text>
         <View style={styles.imageContainer}>
