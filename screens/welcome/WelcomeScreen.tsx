@@ -2,10 +2,15 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useFonts } from "expo-font";
+import { NavigationProp, ParamListBase } from '@react-navigation/native';
 
-const WelcomeScreen = () => {
+interface WelcomeScreenProps {
+  navigation: NavigationProp<ParamListBase>
+}
+
+const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
   const [loaded] = useFonts({
-    "Inter-Regular": require("../assets/fonts/Inter-Regular.ttf"),
+    "Inter-Regular": require("../../assets/fonts/Inter-Regular.ttf"),
   });
 
   if (!loaded) {
@@ -19,21 +24,21 @@ const WelcomeScreen = () => {
         <View style={styles.imageContainer}>
           <Image
             style={styles.foodBag}
-            source={require("../assets/login/foodBag.png")}
+            source={require("../../assets/login/foodBag.png")}
           />
           <Image
             style={styles.waveImage}
-            source={require("../assets/login/wave.png")}
+            source={require("../../assets/login/wave.png")}
           />
         <View style={styles.signInWrapper}>
-          <TouchableOpacity style={styles.signInButton}>
-            <Image source={require("../assets/login/googleSignIn.png")}></Image>
+          <TouchableOpacity onPress={()=> navigation.navigate('signUpScreen')} style={styles.signInButton}>
+            <Image source={require("../../assets/login/googleSignIn.png")}></Image>
           </TouchableOpacity>
           <TouchableOpacity style={styles.signInButton}>
-            <Image source={require("../assets/login/facebook.png")}></Image>
+            <Image source={require("../../assets/login/facebook.png")}></Image>
           </TouchableOpacity>
           <TouchableOpacity style={styles.signInButton}>
-            <Image source={require("../assets/login/apple.png")}></Image>
+            <Image source={require("../../assets/login/apple.png")}></Image>
           </TouchableOpacity>
         </View>
         </View>
